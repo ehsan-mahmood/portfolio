@@ -74,7 +74,25 @@ Content source files are available in the `docs/` folder for reference.
 
 ## Deployment
 
-This project can be deployed on Vercel, Netlify, or any platform that supports Next.js.
+### GitHub Pages
+
+This project is configured for GitHub Pages deployment. The GitHub Actions workflow will automatically build and deploy your site when you push to the `main` branch.
+
+**To enable GitHub Pages:**
+
+1. Go to your repository on GitHub
+2. Navigate to **Settings** → **Pages**
+3. Under **Source**, select **GitHub Actions**
+4. The site will be available at: `https://ehsan-mahmood.github.io/portfolio/`
+
+**Note:** If you want to deploy to the root URL (`username.github.io`), you'll need to:
+- Rename your repository to `username.github.io` (where username is your GitHub username)
+- Update `repoName` in `next.config.js` to match your repo name
+- Or set `basePath` to empty string `''` in production
+
+### Other Platforms
+
+This project can also be deployed on Vercel, Netlify, or any platform that supports Next.js.
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
 
