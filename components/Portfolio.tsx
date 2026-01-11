@@ -4,10 +4,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { Github, Linkedin, Mail } from 'lucide-react';
 
-// Get basePath for GitHub Pages
-const basePath = (typeof window !== 'undefined' 
-  ? (window.location.pathname.match(/^\/[^\/]+/) || [''])[0] 
-  : process.env.NEXT_PUBLIC_BASE_PATH || '') || '/portfolio';
+// Get basePath for GitHub Pages - use environment variable or default to /portfolio for production
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || (typeof window !== 'undefined' && window.location.pathname.includes('/portfolio') ? '/portfolio' : '');
 
 // Diagram Components
 const MicroservicesDiagram = () => (
