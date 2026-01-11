@@ -123,6 +123,18 @@ const ContactLink = ({ icon, label, href }: { icon: React.ReactNode; label: stri
   </a>
 );
 
+const SocialLink = ({ icon, href, label }: { icon: React.ReactNode; href: string; label?: string }) => (
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center justify-center w-10 h-10 rounded-full bg-gray-800 hover:bg-gray-700 text-gray-400 hover:text-blue-400 transition-colors"
+    aria-label={label}
+  >
+    {icon}
+  </a>
+);
+
 const Portfolio = () => {
   const name = 'Ehsan Mahmood'; // TODO: Replace with your name
   const profession = 'Full Stack Engineer'; // TODO: Replace with your profession
@@ -151,13 +163,23 @@ const Portfolio = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
-    sectionsRef.current[id]?.scrollIntoView({ behavior: 'smooth' });
+    const element = sectionsRef.current[id];
+    if (element) {
+      const navHeight = 64; // Approximate nav height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
   };
 
   return (
     <div className="bg-white text-gray-900">
       {/* Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${showNav ? 'translate-y-0 bg-white/90 backdrop-blur-sm shadow-sm' : '-translate-y-full'}`}>
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <div className="text-lg font-semibold text-gray-900">{name}</div>
           <div className="flex gap-8">
@@ -177,44 +199,40 @@ const Portfolio = () => {
       {/* Hero Section - Portfolio Landing */}
       <section
         ref={(el) => { sectionsRef.current['hero'] = el; }}
-        className="min-h-screen flex items-center px-6 md:px-12 relative overflow-hidden bg-white"
+        className="h-screen flex items-center px-6 md:px-12 lg:px-16 relative overflow-hidden bg-white pt-16"
       >
-        <div className="max-w-7xl mx-auto w-full py-20 md:py-32">
-          <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
+        <div className="max-w-7xl mx-auto w-full py-12">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center h-full">
             {/* Left Content */}
-            <div className="lg:col-span-7 space-y-8">
-              <div className="space-y-6">
+            <div className="lg:col-span-6 space-y-6">
+              <div className="space-y-4">
                 <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-tight">
-                  <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-purple-600 bg-clip-text text-transparent">
-                    Building<br />Real-World Products & Systems
-                  </span>
+                  <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-purple-600 bg-clip-text text-transparent block">Building</span>
+                  <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-purple-600 bg-clip-text text-transparent block">Real-World Products & Systems</span>
                 </h1>
               </div>
-              <p className="text-xl md:text-2xl text-gray-600 leading-relaxed max-w-2xl font-light">
+              <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-2xl font-light">
                 I build products and systems that operate in the real world — where software meets logistics, commerce, automation, and physical constraints.
               </p>
             </div>
 
-            {/* Right Profile Card */}
-            <div className="lg:col-span-5 flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-sm lg:max-w-md">
-                <div className="relative rounded-2xl overflow-hidden bg-gray-900 p-1" style={{
-                  background: 'linear-gradient(135deg, #3B82F6 0%, #9333EA 100%)',
-                  boxShadow: '0 20px 60px rgba(59, 130, 246, 0.3), 0 20px 60px rgba(147, 51, 234, 0.2)'
-                }}>
-                  <div className="relative bg-gray-900 rounded-xl overflow-hidden aspect-[3/4] flex flex-col">
-                    <div className="flex-1 relative">
-                      <img
-                        src={`${basePath}/pro-pic.jpg`}
-                        alt={name}
-                        className="object-contain w-full h-full"
-                      />
-                    </div>
-                    <div className="p-6 bg-gray-900 border-t border-gray-800">
-                      <h2 className="text-2xl font-semibold text-white mb-1">{name}</h2>
-                      <p className="text-base text-blue-400">{profession}</p>
-                    </div>
-                  </div>
+            {/* Right Profile Picture */}
+            <div className="lg:col-span-6 relative flex flex-col justify-center lg:justify-center h-full">
+              <div className="relative w-full max-w-md lg:max-w-lg flex flex-col items-center">
+                <div className="relative w-full max-h-[75vh] rounded-2xl overflow-hidden">
+                  <img
+                    src={`${basePath}/pro-pic-3.png`}
+                    alt={name}
+                    className="w-full h-full object-contain"
+                    style={{
+                      filter: 'drop-shadow(0 10px 25px rgba(0, 0, 0, 0.15)) drop-shadow(0 4px 10px rgba(0, 0, 0, 0.1))',
+                    }}
+                  />
+                </div>
+                {/* Name and Profession - below image */}
+                <div className="mt-4 text-center">
+                  <h2 className="text-xl lg:text-2xl font-semibold text-gray-900 mb-1">{name}</h2>
+                  <p className="text-lg lg:text-xl text-gray-600">{profession}</p>
                 </div>
               </div>
             </div>
