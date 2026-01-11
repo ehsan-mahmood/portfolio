@@ -4,6 +4,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 import { Github, Linkedin, Mail } from 'lucide-react';
 
+// Get basePath for GitHub Pages
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+
 // Diagram Components
 const MicroservicesDiagram = () => (
   <svg className="w-full h-full" viewBox="0 0 120 80">
@@ -202,7 +205,7 @@ const Portfolio = () => {
                   <div className="relative bg-gray-900 rounded-xl overflow-hidden aspect-[3/4] flex flex-col">
                     <div className="flex-1 relative">
                       <img
-                        src="/pro-pic.jpg"
+                        src={`${basePath}/pro-pic.jpg`}
                         alt={name}
                         className="object-contain w-full h-full"
                       />
