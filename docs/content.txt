@@ -1,0 +1,153 @@
+# Building Real-World Products & Systems
+
+I build products and systems that operate in the real world — where software meets logistics, commerce, automation, and physical constraints.
+
+My work sits across the full lifecycle: understanding a business problem, designing the system that solves it, and shipping something that people actually use under real conditions.
+
+---
+
+## Systems & Products I’ve Built and Worked On
+
+### QR Code Menu & Ordering Platform (SMB SaaS)
+**Problem:** Small restaurants needed a fast way to publish menus and accept orders without complex POS systems.  
+**Constraint:** Non-technical owners, mobile-first usage, low tolerance for setup friction.  
+**Outcome:** Designed a QR-based menu and ordering system focused on clarity, fast onboarding, and easy content updates.
+
+**What I focused on:**
+- Reducing setup to minutes, not hours  
+- Designing menus that work in noisy, real environments  
+- Balancing flexibility with simplicity for non-technical users  
+
+This project pushed me deeper into product UX, merchant workflows, and customer adoption — not just implementation.
+
+### Scheduling & Booking System for Service Businesses
+**Problem:** Manual scheduling caused double bookings, missed lessons, and payment confusion.  
+**Constraint:** SMS-heavy communication, instructor availability rules, tight margins.  
+**Outcome:** Built a scheduler that aligned bookings, notifications, and payments into a single operational flow.
+
+**Key product considerations:**
+- Designing for operational edge cases, not happy paths  
+- Understanding cost drivers (SMS, hosting, support)  
+- Pricing the product based on unit economics, not features  
+
+This project sharpened my thinking around sustainable SaaS pricing and operational cost control.
+
+---
+
+### Operational Software for Physical Commerce  
+**Problem:** Digital systems often break down when they meet physical operations — inventory, packing, scanning, and human workflows.  
+**Constraint:** Real-time decisions, imperfect data, and users working under pressure.  
+**Outcome:** Designed systems that align software workflows with physical reality, reducing friction between digital intent and operational execution.
+
+---
+
+### Warehouse & Fulfilment Systems  
+**Problem:** Packing and fulfilment logic became hard to change as business rules evolved.  
+**Constraint:** Live operations, shared workflows, and zero tolerance for downtime.  
+**Outcome:** Refactored tightly coupled logic into clearer, independently evolving systems that improved reliability and operational confidence.
+
+---
+
+### E-commerce Adjacent Workflow Automation  
+**Problem:** Business teams needed faster iteration on fulfilment and order-handling rules without destabilising operations.  
+**Constraint:** Legacy interfaces, stateful workflows, and integration-heavy environments.  
+**Outcome:** Built abstractions that allowed rules to change without rewriting core flows, supporting faster experimentation at the business level.
+
+---
+
+### Robotics & Automation Exploration  
+**Problem:** Consumer robotics projects often fail due to poor system integration rather than hardware limitations.  
+**Constraint:** Limited compute, sensor noise, and real-world unpredictability.  
+**Outcome:** Prototyped ROS-based systems and simulations to explore navigation, control, and system coordination in constrained environments.
+
+---
+
+## How I Approach Product & System Design
+
+I start by understanding what the business is trying to achieve, then work backwards to the system shape.
+
+In fulfilment systems, I often face the question: should complexity live in software or in process?  
+Given high operational variance, I tend to push complexity into software where it can be observed, tested, and improved.
+
+**Typical design decisions include:**
+- Choosing explicit workflows over implicit behaviour
+- Isolating business rules from execution logic
+- Designing systems that fail visibly rather than silently
+
+The trade-off is often more upfront design work, but it pays off in adaptability and trust.
+
+---
+
+## Designing for Humans in High-Friction Environments
+
+Many of the users I design for are not “users” in the product sense — they are operators, staff, or customers trying to get something done quickly.
+
+In warehouse and e-commerce operations, small UX decisions compound into real cost.  
+A confusing scan flow or unclear error message doesn’t just annoy — it slows throughput.
+
+By simplifying decision points and surfacing intent clearly, I’ve seen systems become faster not because they were optimised, but because people trusted them.
+
+---
+
+## Thoughts on Products, Systems & Automation
+
+### Products Are Systems First  
+Features matter less than how the system behaves under stress.
+
+### Physical Reality Always Wins  
+Inventory, robots, and humans don’t behave like clean data models — good products respect that.
+
+### E-commerce Is an Operations Problem  
+The best customer experiences are built on boring, reliable backend systems.
+
+---
+
+## Capabilities & Tools
+
+### Product & Systems Design
+- End-to-end system thinking
+- Workflow and process modelling
+- Trade-off driven design
+- Operational feedback loops
+
+### Backend & Integration
+- PHP, C++
+- API and stateful workflows
+- Business rule engines
+- SQL-heavy operational systems
+
+### Cloud & Infrastructure
+- AWS (EC2, RDS, basic orchestration)
+- Production deployments
+- Reliability and failure modes
+
+### Frontend & Interaction Design
+- Vue.js
+- Workflow-first UI design
+- Interfaces for constrained devices
+- Operator and customer-facing flows
+
+### Robotics & Automation
+- ROS fundamentals
+- Gazebo simulation
+- Sensor-driven workflows
+- Hardware–software integration
+
+---
+
+## What I’m Building Towards
+
+I’m interested in products that sit at the intersection of:
+- E-commerce and fulfilment
+- Automation and robotics
+- Marketplaces and real-world logistics
+
+I’m particularly drawn to problems where software directly shapes physical outcomes.
+
+---
+
+## Let’s Build Something Meaningful
+
+I enjoy working with people who care about shipping real products — not just writing code.
+
+If you’re exploring ideas in e-commerce, automation, robotics, or operational software, I’m always open to thoughtful conversations and collaborations.
