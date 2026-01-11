@@ -201,13 +201,10 @@ const Portfolio = () => {
                 }}>
                   <div className="relative bg-gray-900 rounded-xl overflow-hidden aspect-[3/4] flex flex-col">
                     <div className="flex-1 relative">
-                      <Image
+                      <img
                         src="/pro-pic.jpg"
                         alt={name}
-                        width={400}
-                        height={533}
                         className="object-contain w-full h-full"
-                        priority
                       />
                     </div>
                     <div className="p-6 bg-gray-900 border-t border-gray-800">
