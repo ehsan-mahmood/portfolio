@@ -5,7 +5,9 @@ import Image from 'next/image';
 import { Github, Linkedin, Mail } from 'lucide-react';
 
 // Get basePath for GitHub Pages
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+const basePath = (typeof window !== 'undefined' 
+  ? (window.location.pathname.match(/^\/[^\/]+/) || [''])[0] 
+  : process.env.NEXT_PUBLIC_BASE_PATH || '') || '/portfolio';
 
 // Diagram Components
 const MicroservicesDiagram = () => (
