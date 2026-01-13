@@ -314,7 +314,7 @@ const Portfolio = () => {
           
           <div className="space-y-20">
             {/* System 1 - QR Code Menu & Ordering Platform */}
-            <div className="grid md:grid-cols-5 gap-8 items-start">
+            <div className="grid md:grid-cols-5 gap-8 items-start bg-white p-8 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="md:col-span-2">
                 <div className="h-48 flex items-center justify-center">
                   <WorkflowDiagram />
@@ -351,9 +351,18 @@ const Portfolio = () => {
             </div>
 
             {/* System 2 - Scheduling & Booking System */}
-            <div className="grid md:grid-cols-5 gap-8 items-start">
+            <div className="grid md:grid-cols-5 gap-8 items-start bg-white p-8 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="md:col-span-3 md:col-start-1 space-y-4">
-                <h3 className="text-2xl font-bold">Scheduling & Booking System for Service Businesses</h3>
+                <h3 className="text-2xl font-bold">
+                  <a 
+                    href="https://ehsan-mahmood.github.io/scheduler_app/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-blue-600 transition-colors"
+                  >
+                    Scheduling & Booking System for Service Businesses
+                  </a>
+                </h3>
                 <div className="space-y-3">
                   <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Problem</p>
                   <p className="text-lg text-gray-600">
@@ -381,14 +390,39 @@ const Portfolio = () => {
                 </div>
               </div>
               <div className="md:col-span-2">
-                <div className="h-48 flex items-center justify-center">
-                  <EventDiagram />
+                <div className="relative space-y-4">
+                  {/* Booking Page - Bottom Layer */}
+                  <div className="relative z-10 rounded-lg overflow-hidden border border-gray-200 bg-gray-50 shadow-sm">
+                    <div className="absolute top-3 left-3 z-20">
+                      <span className="text-xs font-semibold text-gray-600 uppercase tracking-wide bg-white/90 backdrop-blur-sm px-2 py-1 rounded">Booking Page</span>
+                    </div>
+                    <Image
+                      src={`${basePath}/shchedueler-1.png`}
+                      alt="Scheduler App - Booking Interface"
+                      width={500}
+                      height={375}
+                      className="w-full h-auto object-contain"
+                    />
+                  </div>
+                  {/* Admin Dashboard - Slight Corner Overlay */}
+                  <div className="relative -mt-6 ml-auto w-[92%] z-20 rounded-lg overflow-hidden border border-gray-200 bg-gray-50 shadow-sm">
+                    <div className="absolute top-3 left-3 z-20">
+                      <span className="text-xs font-semibold text-gray-600 uppercase tracking-wide bg-white/90 backdrop-blur-sm px-2 py-1 rounded">Admin Dashboard</span>
+                    </div>
+                    <Image
+                      src={`${basePath}/shchedueler-2.png`}
+                      alt="Scheduler App - Dashboard"
+                      width={500}
+                      height={375}
+                      className="w-full h-auto object-contain"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* System 3 - Operational Software for Physical Commerce */}
-            <div className="grid md:grid-cols-5 gap-8 items-start">
+            <div className="grid md:grid-cols-5 gap-8 items-start bg-white p-8 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="md:col-span-2">
                 <div className="h-48 flex items-center justify-center">
                   <MicroservicesDiagram />
@@ -414,7 +448,7 @@ const Portfolio = () => {
             </div>
 
             {/* System 4 - Warehouse & Fulfilment Systems */}
-            <div className="grid md:grid-cols-5 gap-8 items-start">
+            <div className="grid md:grid-cols-5 gap-8 items-start bg-white p-8 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="md:col-span-3 md:col-start-1 space-y-4">
                 <h3 className="text-2xl font-bold">Warehouse & Fulfilment Systems</h3>
                 <div className="space-y-3">
@@ -440,7 +474,7 @@ const Portfolio = () => {
             </div>
 
             {/* System 5 - E-commerce Adjacent Workflow Automation */}
-            <div className="grid md:grid-cols-5 gap-8 items-start">
+            <div className="grid md:grid-cols-5 gap-8 items-start bg-white p-8 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="md:col-span-2">
                 <div className="h-48 flex items-center justify-center">
                   <EventDiagram />
@@ -466,7 +500,7 @@ const Portfolio = () => {
             </div>
 
             {/* System 6 - Robotics & Automation Exploration */}
-            <div className="grid md:grid-cols-5 gap-8 items-start">
+            <div className="grid md:grid-cols-5 gap-8 items-start bg-white p-8 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
               <div className="md:col-span-3 md:col-start-1 space-y-4">
                 <h3 className="text-2xl font-bold">Robotics & Automation Exploration</h3>
                 <div className="space-y-3">
