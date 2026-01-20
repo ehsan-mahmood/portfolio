@@ -315,11 +315,6 @@ const Portfolio = () => {
           <div className="space-y-20">
             {/* System 1 - QR Code Menu & Ordering Platform */}
             <div className="grid md:grid-cols-5 gap-8 items-start bg-white p-8 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-shadow">
-              <div className="md:col-span-2">
-                <div className="h-48 flex items-center justify-center">
-                  <WorkflowDiagram />
-                </div>
-              </div>
               <div className="md:col-span-3 space-y-4">
                 <h3 className="text-2xl font-bold">QR Code Menu & Ordering Platform (SMB SaaS)</h3>
                 <div className="space-y-3">
@@ -346,6 +341,64 @@ const Portfolio = () => {
                   <p className="text-sm text-gray-500 italic pt-2">
                     This project pushed me deeper into product UX, merchant workflows, and customer adoption — not just implementation.
                   </p>
+                </div>
+              </div>
+              <div className="md:col-span-2">
+                <div className="relative" style={{ minHeight: '720px' }}>
+                  {/* Dashboard - Large, Top Right */}
+                  <div className="absolute -top-4 right-0 z-10" style={{ width: '105%' }}>
+                    <div className="relative rounded-lg overflow-hidden border border-gray-200 bg-gray-50 shadow-sm scale-105 origin-top-right">
+                      <div className="absolute top-3 left-3 z-20">
+                        <span className="text-xs font-semibold text-gray-600 uppercase tracking-wide bg-white/90 backdrop-blur-sm px-2 py-1 rounded">
+                          Merchant Dashboard
+                        </span>
+                      </div>
+                      <Image
+                        src={`${basePath}/dashboard_qr.png`}
+                        alt="QR Menu - Merchant Dashboard"
+                        width={1200}
+                        height={900}
+                        className="w-full h-auto object-contain"
+                        style={{ maxHeight: '520px' }}
+                      />
+                    </div>
+                  </div>
+                  {/* QR Code - Larger, Left of Mobile, top aligned with middle of phone screen, bottom aligned with phone frame */}
+                  <div className="absolute bottom-24 right-[200px] z-30" style={{ width: '220px', transform: 'translateY(-120px)' }}>
+                    <div className="bg-white rounded-xl p-4 shadow-lg border-2 border-blue-500">
+                      <div className="text-center mb-3 bg-blue-500 rounded-lg py-2 px-3">
+                        <p className="text-sm font-bold text-white">Scan to Order</p>
+                      </div>
+                      <div className="bg-white p-2 rounded-lg">
+                        <Image
+                          src={`${basePath}/menu_qr_scan.png`}
+                          alt="QR Code - Scan to Order"
+                          width={200}
+                          height={200}
+                          className="w-full h-auto object-contain"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  {/* Mobile Customer Menu - Medium, Bottom Right, slight overlap with dashboard */}
+                  <div className="absolute bottom-24 right-0 z-20">
+                    <div className="relative bg-black rounded-[2rem] p-1.5 shadow-2xl w-[180px]">
+                      <div className="bg-white rounded-[1.5rem] overflow-hidden">
+                        {/* Notch */}
+                        <div className="bg-black h-5 w-20 mx-auto rounded-b-2xl" />
+                        {/* Screen Content */}
+                        <div className="relative">
+                          <Image
+                            src={`${basePath}/qr-menu-customer_menu.png`}
+                            alt="QR Menu - Customer Mobile View"
+                            width={300}
+                            height={600}
+                            className="w-full h-auto object-contain"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
